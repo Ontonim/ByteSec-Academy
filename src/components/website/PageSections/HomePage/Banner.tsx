@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Play } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Paintbrush as Pinterest ,Play} from 'lucide-react'
 
 export default function Banner() {
   return (
@@ -11,41 +11,60 @@ export default function Banner() {
 
       {/* Content container */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:flex lg:items-center lg:justify-between lg:gap-12">
-        {/* Left Content */}
-        <div className="max-w-2xl space-y-6">
-          <p className="text-red-500 font-semibold uppercase tracking-wide">
-            Born to Hack. Trained to Secure.
-          </p>
-          <h1 className="text-4xl font-extrabold sm:text-5xl leading-tight">
-            Cyber Security Training for <br />
-            <span className="text-white">Future Professionals</span>
-          </h1>
-          <p className="text-gray-300 text-base sm:text-lg">
-            Empowering the Next Generation of Ethical Hackers and Security
-            Experts. Gain real-world skills in Web, Network, API, Server & AD
-            Pentesting through hands-on labs and live attack simulations.
+         <div className="flex flex-col justify-center space-y-8">
+          <div>
+            <p className="text-slate-400 text-sm font-medium mb-2 tracking-wide">
+              ENTERPRISE SECURITY SOLUTIONS
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="text-white">Cyber Security Solutions for</span>
+              <br />
+              <span className="text-white">Organizations with</span>
+              <br />
+              <span className="text-red-500">Critical Infrastructure</span>
+            </h1>
+          </div>
+
+          {/* Description */}
+          <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-xl">
+            Protect your organization's most valuable assets with enterprise-grade cybersecurity solutions. Our advanced threat detection and incident response systems safeguard critical infrastructure from evolving security threats.
           </p>
 
-          {/* Buttons */}
-          <div className="flex gap-4 pt-4">
-            <a
-              href="#"
-              className="bg-red-600 text-white hover:bg-transparent hover:border font-medium px-6 py-3 rounded-md shadow-md transition "
-            >
-              Start Learning
-            </a>
-            <button className="border border-white text-gray-300 hover:bg-red-700 px-4 py-3 rounded-md flex items-center gap-2 transition cursor-pointer">
-              <Play className="w-4 h-4 fill-current" />
-              Watch Video
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 items-center">
+            <button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200">
+              Discover More
+            </button>
+            <button className="border-2 border-slate-400 hover:border-red-500 text-slate-400 hover:text-red-500 p-3 rounded transition-colors duration-200">
+              <Play size={20} fill="currentColor" />
             </button>
           </div>
 
+          {/* Social Icons */}
+          <div className="flex items-center gap-6 pt-4">
+            <div className="h-px w-12 bg-slate-600" />
+            <div className="flex gap-4">
+              <a href="#" className="text-slate-400 hover:text-red-500 transition-colors">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="text-slate-400 hover:text-red-500 transition-colors">
+                <Twitter size={20} />
+              </a>
+              <a href="#" className="text-slate-400 hover:text-red-500 transition-colors">
+                <Linkedin size={20} />
+              </a>
+              <a href="#" className="text-slate-400 hover:text-red-500 transition-colors">
+                <Pinterest size={20} />
+              </a>
+            </div>
+          </div>
         </div>
+
 
         {/* Right Illustration */}
         <div className="mt-12 lg:mt-0">
           <Image
-            src="/images/undraw_dev-productivity_5wps-removebg-preview.png"
+            src="https://designingmedia.com/redlight/wp-content/uploads/2023/12/banner-img.png"
             alt="Cyber security illustration"
             width={550}
             height={400}
