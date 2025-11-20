@@ -3,8 +3,7 @@
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { Shield, Lock, Award } from 'lucide-react'
-import { Newsletter } from '../newsletter'
-
+import NewsletterSubscribe from '../newsletter'
 interface DetailsProps {
   cardId: string
 }
@@ -171,7 +170,7 @@ export function DetailsPage({ cardId }: DetailsProps) {
 
         {/* CTA Section */}
 <div className='my-24 '>
-          <Newsletter />
+          <NewsletterSubscribe />
 </div>      </div>
     </section>
   )

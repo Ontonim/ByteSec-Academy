@@ -1,55 +1,54 @@
-'use client'
+"use client"
 
-import { FormEvent, useState } from 'react'
-import { Button } from '@/components/ui/button'
+import type React from "react"
 
-export function Newsletter() {
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
+import { useState } from "react"
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+export default function NewsletterSubscribe() {
+  const [email, setEmail] = useState("")
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate submission
-    await new Promise(resolve => setTimeout(resolve, 500))
-    setEmail('')
-    setIsSubmitting(false)
+    if (email) {
+      setIsSubmitted(true)
+      setEmail("")
+      setTimeout(() => {
+        setIsSubmitted(false)
+      }, 3000)
+    }
   }
 
   return (
-    <section className="w-full rounded-2xl inset-0 bg-gradient-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100 py-20 px-4 sm:py-32">
-      <div className="mx-auto max-w-2xl rounded-lg">
-        {/* Heading */}
-        <h1 className="text-balance text-center text-4xl font-bold text-white sm:text-5xl">
-          Subscribe Our Newsletter
-        </h1>
+    <section className="py-10 inset-0 bg-gradient-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100">
+  
 
-        {/* Description */}
-        <p className="mt-6 text-center text-lg text-gray-400">
-          Get the latest cybersecurity training insights, exclusive pentesting techniques, real-world hacking scenarios, and industry trends delivered straight to your inbox
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center border border-red-600/50 rounded-lg shadow-lg  p-30">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">Subscribe Our Newsletter</h2>
+
+        <p className="text-gray-400 text-lg mb-8 leading-relaxed text-pretty">
+          Get the latest cybersecurity insights, threat intelligence, and industry best practices delivered directly to
+          your inbox. Stay ahead of emerging threats.
         </p>
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="mt-10">
-          <div className="flex flex-col sm:flex-row gap-3 rounded-xl overflow-hidden bg-white p-1.5">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1 px-6 py-3 bg-transparent text-gray-900 placeholder-gray-500 outline-none"
-              disabled={isSubmitting}
-            />
-            <Button
-              type="submit"
-              disabled={isSubmitting}
-              className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors whitespace-nowrap"
-            >
-              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-            </Button>
-          </div>
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email address"
+            required
+            className="flex-1 px-4 py-3 rounded-lg bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600"
+          />
+          <button
+            type="submit"
+            className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-colors duration-200 whitespace-nowrap"
+          >
+            Subscribe
+          </button>
         </form>
+
+        {isSubmitted && <p className="mt-4 text-green-400 font-medium animate-pulse">✓ Thank you for subscribing!</p>}
       </div>
     </section>
   )
