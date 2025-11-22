@@ -1,14 +1,17 @@
 import { Check } from "lucide-react"
+import Image from "next/image"
 
 export default function SecurityFeatures() {
   return (
-    <section className="w-full py-16 md:py-24 px-4 bg-gradient-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-1000">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="w-full py-16 md:py-24 px-4 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="flex justify-center order-1 md:order-2">
-          <img
+          <Image
             src="https://designingmedia.com/redlight/wp-content/uploads/2023/12/cyber-security-right-img.png"
             alt="Cybersecurity Protection"
             className="w-full h-auto rounded-xl shadow-2xl"
+            width={800}
+            height={800}
           />
         </div>
 
@@ -24,7 +27,7 @@ export default function SecurityFeatures() {
 
           <ul className="space-y-4">
             <li className="flex gap-3 items-start">
-              <div className="flex-shrink-0 mt-1">
+              <div className="shrink-0 mt-1">
                 <Check className="w-5 h-5 text-red-600" />
               </div>
               <div>
@@ -33,7 +36,7 @@ export default function SecurityFeatures() {
               </div>
             </li>
             <li className="flex gap-3 items-start">
-              <div className="flex-shrink-0 mt-1">
+              <div className="shrink-0 mt-1">
                 <Check className="w-5 h-5 text-red-600" />
               </div>
               <div>
@@ -42,7 +45,7 @@ export default function SecurityFeatures() {
               </div>
             </li>
             <li className="flex gap-3 items-start">
-              <div className="flex-shrink-0 mt-1">
+              <div className="shrink-0 mt-1">
                 <Check className="w-5 h-5 text-red-600" />
               </div>
               <div>

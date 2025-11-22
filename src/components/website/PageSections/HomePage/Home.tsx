@@ -4,17 +4,21 @@ import { CyberSecurityHero } from "./cyber-security-hero";
 import { WhyChooseUsEnhanced } from "./why-choose-us/why-choose-us-enhanced";
 import NewsletterSubscribe from "./newsletter";
 import SecurityFeatures from "./security-features";
-import StatsSection from "./stats-section";
+// import StatsSection from "./stats-section";
+import Community from "./community";
+import Faq from "./Faq";
 export default function HomePage() {
   return (
     <div>
-        <Banner/>
-        <Services/>
-        <WhyChooseUsEnhanced/>
-        <CyberSecurityHero/>
-        <StatsSection/>
-      <SecurityFeatures/>
-          <NewsletterSubscribe/>
+      <Banner />
+      <Services />
+      <WhyChooseUsEnhanced />
+      <Community />
+      <CyberSecurityHero />
+      {/* <StatsSection /> */}
+      <SecurityFeatures />
+      <Faq />
+      <NewsletterSubscribe />
     </div>
   );
 }

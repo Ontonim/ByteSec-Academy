@@ -5,6 +5,7 @@ import type React from "react";
 import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -164,12 +165,12 @@ export default function ContactPage() {
               </div>
 
               {/* Submit Button */}
-              <button
+              <Button
                 type="submit"
-                className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 mt-6"
+                className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 mt-6 cursor-pointer"
               >
                 Send Message
-              </button>
+              </Button>
 
               {/* Success Message */}
               {submitted && (

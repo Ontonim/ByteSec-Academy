@@ -36,8 +36,8 @@ export function WhyChooseUsEnhanced() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
 
   return (
-    <section className="py-20 inset-0 bg-gradient-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 inset-0 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Why Choose Us</h2>
@@ -100,7 +100,7 @@ export function WhyChooseUsEnhanced() {
 
               {/* Bottom border accent */}
               {hoveredCard === card.id && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-red-500 to-transparent" />
               )}
             </div>
           ))}

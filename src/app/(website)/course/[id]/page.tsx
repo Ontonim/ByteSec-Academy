@@ -399,7 +399,7 @@ export default function CourseDetailPage() {
         <p className="text-gray-400 text-lg mb-8">
           Join thousands of students who&apos;ve already transformed their careers with this course.
         </p>
-        <Button className="px-8 py-6 bg-red-600 hover:bg-red-700 text-white text-lg font-semibold rounded-lg transition-all">
+        <Button className="px-8 py-6 bg-red-600 hover:bg-red-700 text-white text-lg font-semibold rounded-lg transition-all cursor-pointer">
           Enroll Now
         </Button>
       </section>

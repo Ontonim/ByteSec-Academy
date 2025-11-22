@@ -74,7 +74,7 @@ function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) 
 
 export default function StatsSection() {
   return (
-    <section className="w-full py-10 px-4 bg-gradient-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100">
+    <section className="w-full py-10 px-4 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-6xl mx-auto">
        
 
