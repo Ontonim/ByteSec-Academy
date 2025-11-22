@@ -3,8 +3,9 @@ import Image from "next/image"
 
 export default function SecurityFeatures() {
   return (
-    <section className="w-full py-16 md:py-24 px-4 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="w-full py-16 md:py-24 px-4 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 relative">
+      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="flex justify-center order-1 md:order-2">
           <Image
             src="https://designingmedia.com/redlight/wp-content/uploads/2023/12/cyber-security-right-img.png"

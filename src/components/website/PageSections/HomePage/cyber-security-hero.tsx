@@ -5,13 +5,10 @@ export function CyberSecurityHero() {
   return (
     <section className="relative bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 min-h-screen flex items-center overflow-hidden">
       {/* Background decorative elements */}
-      {/* <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-red-600/10 rounded-full blur-3xl top-20 -left-48"></div>
-        <div className="absolute w-96 h-96 bg-slate-800/40 rounded-full blur-3xl bottom-20 -right-48"></div>
-      </div> */}
+     <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
 
       {/* Content container */}
-      <div className="w-full max-w-7xl mx-auto px-4">
+      <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left side - Image */}
           <div className="relative flex justify-center lg:justify-end order-2 lg:order-1">

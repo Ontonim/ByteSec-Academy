@@ -3,8 +3,9 @@ import Image from "next/image";
 
 const Community = () => {
   return (
-    <section className="py-24 px-4 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 px-4 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 relative bg-[#141414]">
+      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+      <div className="max-w-7xl mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Image */}
           <div className="flex justify-center lg:justify-start order-2 lg:order-1">

@@ -34,13 +34,14 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-linear-to-b from-slate-900 to-slate-800">
+    <main className="min-h-screen bg-linear-to-b from-slate-900 to-slate-800 relative">
+      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
       {/* Header Section */}
-      <section className="py-20 text-center">
+      <section className="py-20 text-center relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
           Contact Us
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-8 text-lg">
+        <p className="text-gray-200 max-w-2xl mx-auto mb-8 text-lg">
           Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusm
           tempor incididunt ut labore et dolore magna aliqua.
         </p>
@@ -54,7 +55,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-20">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Side - Contact Info */}
           <div className="space-y-8">
@@ -62,7 +63,7 @@ export default function ContactPage() {
               <h2 className="text-4xl font-bold text-white mb-4">
                 Drop Us A Message For Any Query
               </h2>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed">
                 Lorem ipsum dolor sit amet consectetur adipiscing elitanean
                 commodolligula egetmassa.
               </p>

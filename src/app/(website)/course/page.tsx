@@ -133,9 +133,10 @@ const courses = [
 
 export default function CoursesPage() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 text-white relative">
+      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
       {/* Header Section */}
-      <div className="pt-20 pb-16 px-4 text-center">
+      <div className="pt-20 pb-16 px-4 text-center relative z-10">
         <h1 className="text-5xl font-bold mb-6 text-white">
           Cybersecurity Courses
         </h1>
@@ -153,7 +154,7 @@ export default function CoursesPage() {
       </div>
 
       {/* Courses Grid */}
-      <div className="max-w-7xl mx-auto px-4 pb-20">
+      <div className="max-w-7xl mx-auto px-4 pb-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course) => {
             const IconComponent = course.icon;

@@ -21,8 +21,9 @@ export default function NewsletterSubscribe() {
   };
 
   return (
-    <section className="py-10 inset-0 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
-      <div className="relative w-full max-w-7xl mx-auto px-4 text-center rounded-lg shadow-lg  p-30">
+    <section className="py-10 inset-0 bg-[#141414] relative">
+      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+      <div className="relative w-full max-w-7xl mx-auto px-4 text-center rounded-lg shadow-lg p-30 z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
           Subscribe Our Newsletter
         </h2>

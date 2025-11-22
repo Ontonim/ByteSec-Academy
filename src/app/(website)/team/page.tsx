@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Mail, Linkedin, Twitter, Github } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { Mail, Linkedin, Twitter, Github } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const teamMembers = [
   {
@@ -10,7 +10,8 @@ const teamMembers = [
     name: "Eric T. Parker",
     designation: "Network Security",
     bio: "Expert in network infrastructure, penetration testing, and security protocols with 10+ years of experience.",
-    image: "https://www.lithasymphony.org/uploads/2/0/9/1/20913348/empheadshot-low-res_orig.jpg",
+    image:
+      "https://www.lithasymphony.org/uploads/2/0/9/1/20913348/empheadshot-low-res_orig.jpg",
     social: {
       email: "eric@example.com",
       linkedin: "#",
@@ -23,7 +24,8 @@ const teamMembers = [
     name: "Shira Rubinoff",
     designation: "Security Executive",
     bio: "Leading security initiatives and strategic planning with deep expertise in enterprise cybersecurity governance.",
-    image: "https://azurecrazy.com/wp-content/uploads/2020/11/Sarah-Young-Pic-1-1024x1536.jpg",
+    image:
+      "https://azurecrazy.com/wp-content/uploads/2020/11/Sarah-Young-Pic-1-1024x1536.jpg",
     social: {
       email: "shira@example.com",
       linkedin: "#",
@@ -36,7 +38,8 @@ const teamMembers = [
     name: "Steve Morgan",
     designation: "Security Technologist",
     bio: "Specializing in emerging security technologies, cloud security, and innovative threat detection systems.",
-    image: "https://www.vedp.org/sites/default/files/images/2021-09/Steve_Headshot_color.jpeg",
+    image:
+      "https://www.vedp.org/sites/default/files/images/2021-09/Steve_Headshot_color.jpeg",
     social: {
       email: "steve@example.com",
       linkedin: "#",
@@ -49,7 +52,8 @@ const teamMembers = [
     name: "Sarah Chen",
     designation: "Ethical Hacker",
     bio: "Certified ethical hacker with expertise in bug bounty programs and vulnerability assessment.",
-    image: "https://cdn.tatlerasia.com/tatlerasia/i/2023/10/18163147-untitled-design-4_cover_1600x938.jpg",
+    image:
+      "https://cdn.tatlerasia.com/tatlerasia/i/2023/10/18163147-untitled-design-4_cover_1600x938.jpg",
     social: {
       email: "sarah@example.com",
       linkedin: "#",
@@ -75,7 +79,8 @@ const teamMembers = [
     name: "Jessica Williams",
     designation: "Incident Response Lead",
     bio: "Leading incident response teams with expertise in digital forensics and threat intelligence.",
-    image: "https://clarkebell.com/wp-content/uploads/2023/10/jessica-williams-2.jpg",
+    image:
+      "https://clarkebell.com/wp-content/uploads/2023/10/jessica-williams-2.jpg",
     social: {
       email: "jessica@example.com",
       linkedin: "#",
@@ -83,23 +88,30 @@ const teamMembers = [
       github: "#",
     },
   },
-]
+];
 
 export default function TeamPage() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 relative">
+      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
       {/* Hero Section */}
-      <div className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">Our Expert Team</h1>
-          <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-            Meet the exceptional cybersecurity professionals dedicated to protecting your digital assets and ensuring
-            organizational security excellence.
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Our Expert Team
+          </h1>
+          <p className="text-lg text-slate-200 mb-8 leading-relaxed">
+            Meet the exceptional cybersecurity professionals dedicated to
+            protecting your digital assets and ensuring organizational security
+            excellence.
           </p>
 
           {/* Breadcrumb */}
           <div className="flex justify-center items-center gap-2 text-sm">
-            <Link href="/" className="text-slate-400 hover:text-white transition-colors">
+            <Link
+              href="/"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
               Home
             </Link>
             <span className="text-slate-600">/</span>
@@ -109,10 +121,13 @@ export default function TeamPage() {
       </div>
 
       {/* Team Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamMembers.map((member) => (
-            <div key={member.id} className="group flex flex-col items-center text-center">
+            <div
+              key={member.id}
+              className="group flex flex-col items-center text-center"
+            >
               {/* Image Container with Grayscale Hover Effect */}
               <div className="relative w-full mb-6 overflow-hidden rounded-xl">
                 <Image
@@ -132,12 +147,14 @@ export default function TeamPage() {
               </h3>
 
               {/* Designation - changes to red on hover */}
-              <p className="text-slate-400 font-medium mb-3 transition-colors duration-300 group-hover:text-red-500">
+              <p className="text-slate-100 font-medium mb-3 transition-colors duration-300 group-hover:text-red-500">
                 {member.designation}
               </p>
 
               {/* Bio */}
-              <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-3">{member.bio}</p>
+              <p className="text-slate-200 text-sm leading-relaxed mb-6 line-clamp-3">
+                {member.bio}
+              </p>
 
               {/* Social Links */}
               <div className="flex justify-center gap-4">
@@ -175,5 +192,5 @@ export default function TeamPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
