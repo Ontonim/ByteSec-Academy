@@ -8,6 +8,7 @@ import {
   Paintbrush as Pinterest,
   Play,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Banner() {
   return (
@@ -16,15 +17,15 @@ export default function Banner() {
       <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
 
       {/* Content container */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:flex lg:items-center lg:justify-between lg:gap-12">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 lg:flex lg:items-center lg:justify-between lg:gap-12">
         <div className="flex flex-col justify-center space-y-8">
           <div>
             <p className="text-slate-400 text-sm font-medium mb-2 tracking-wide">
               Born to Hack. Trained to Secure.
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-white">Cyber Security Training for</span>
-              <br />
+              <span className="text-white">Cyber Security Training for </span>
+              {/* <br /> */}
               <span className="text-red-500">Future Professionals</span>
             </h1>
           </div>
@@ -38,10 +39,10 @@ export default function Banner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 items-center">
-            <button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200">
+            <Button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200 cursor-pointer">
               Start Learning
-            </button>
-            <button className="border-2 border-slate-400 hover:border-red-500 text-slate-400 hover:text-red-500 p-3 rounded transition-colors duration-200">
+            </Button>
+            <button className="border-2 border-slate-400 hover:border-red-500 text-slate-400 hover:text-red-500 p-3 rounded transition-colors duration-200 cursor-pointer">
               <Play size={20} fill="currentColor" />
             </button>
           </div>

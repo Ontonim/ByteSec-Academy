@@ -27,12 +27,9 @@ export default function Navbar() {
   const menuItems = [
     { href: "/", label: "Home" },
     { href: "/course", label: "Course" },
-    { href: "/services", label: "Blogs" },
-    { href: "/about-us", label: "About Us" },
     { href: "/team", label: "Team" },
-    { href: "/faq", label: "FAQ" },
-    { href: "/contact-us", label: "Contact Us" },
     { href: "/reviews", label: "Reviews" },
+    { href: "/contact-us", label: "Contact Us" },
   ];
 
   return (
@@ -76,7 +73,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex gap-4 hidden md:flex">
+        <div className="flex gap-4 md:flex">
           <Link href="/enroll-now">
             <Button
               variant="outline"
