@@ -105,11 +105,11 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden py-20">
-      {/* <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div> */}
+    <div className="relative bg-[#141414] min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden py-20">
+      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, idx) => {
             const IconComponent = service.icon

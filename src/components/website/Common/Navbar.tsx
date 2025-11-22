@@ -74,7 +74,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex gap-4 md:flex">
-          <Link href="/enroll-now">
+          <Link href="/course">
             <Button
               variant="outline"
               className="bg-red-600 text-white hover:bg-transparent hover:border font-medium px-6 py-3 rounded-md shadow-md transition cursor-pointer"

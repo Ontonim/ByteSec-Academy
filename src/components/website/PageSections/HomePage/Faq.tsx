@@ -3,8 +3,9 @@ import FAQAccordion from "./FaqAccordian";
 
 const Faq = () => {
   return (
-    <section className="py-24 px-4 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 px-4 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 relative">
+        <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="flex justify-center lg:justify-start w-full">
             <div className="relative w-3/4">

@@ -9,6 +9,7 @@ import {
   Play,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -39,9 +40,11 @@ export default function Banner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 items-center">
-            <Button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200 cursor-pointer">
-              Start Learning
-            </Button>
+            <Link href={"/course"}>
+              <Button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200 cursor-pointer">
+                Start Learning
+              </Button>
+            </Link>
             <button className="border-2 border-slate-400 hover:border-red-500 text-slate-400 hover:text-red-500 p-3 rounded transition-colors duration-200 cursor-pointer">
               <Play size={20} fill="currentColor" />
             </button>
