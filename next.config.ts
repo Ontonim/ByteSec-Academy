@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   images: {
-    domains: [
-      "img.freepik.com",
-      "designingmedia.com",
-      "hebbkx1anhila5yf.public.blob.vercel-storage.com"
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**", // Allows all domains
+      },
     ],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

@@ -120,3 +120,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+@supports not (filter: grayscale(1)) {
+  .grayscale {
+    filter: grayscale(100%);
+  }
+
+  .grayscale-0 {
+    filter: grayscale(0%);
+  }
+}

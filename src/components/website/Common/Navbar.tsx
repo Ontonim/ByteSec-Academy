@@ -26,13 +26,13 @@ export default function Navbar() {
 
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "/products", label: "Course" },
+    { href: "/course", label: "Course" },
     { href: "/services", label: "Blogs" },
     { href: "/about-us", label: "About Us" },
-    { href: "/contact-us", label: "Team" },
-    { href: "/contact-us", label: "FAQ" },
+    { href: "/team", label: "Team" },
+    { href: "/faq", label: "FAQ" },
     { href: "/contact-us", label: "Contact Us" },
-    { href: "/contact-us", label: "Reviews" },
+    { href: "/reviews", label: "Reviews" },
   ];
 
   return (
