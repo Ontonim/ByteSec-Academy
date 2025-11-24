@@ -36,8 +36,8 @@ export function WhyChooseUsEnhanced() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
 
   return (
-    <section className="relative bg-[#141414] py-20 inset-0 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
-      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+    <section className="relative py-10">
+      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
       <div className="max-w-7xl mx-auto px-4 relative">
         {/* Header */}
         <div className="text-center mb-16">
@@ -56,8 +56,8 @@ export function WhyChooseUsEnhanced() {
               onMouseLeave={() => setHoveredCard(null)}
               className={`p-8 rounded-lg transition-all duration-500 cursor-pointer transform ${
                 hoveredCard === card.id
-                  ? 'bg-red-600/15 border border-red-500 shadow-2xl shadow-red-600/20 scale-105'
-                  : 'bg-slate-900/50 border border-slate-800 shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30'
+                  ? 'bg-[#191919] shadow-red-600/20 scale-105'
+                  : 'bg-[#191919] shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30'
               }`}
             >
               

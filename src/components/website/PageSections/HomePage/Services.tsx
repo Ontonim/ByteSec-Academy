@@ -105,18 +105,18 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="relative bg-[#141414] min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden py-20">
-      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+    <div className="relative text-white py-10">
+      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
 
       {/* Services Grid */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, idx) => {
             const IconComponent = service.icon
             return (
               <div
                 key={idx}
-                className="group relative bg-gray-900/50 border border-gray-800 rounded-xl p-8 hover:border-red-600/50 transition-all duration-300 overflow-hidden flex flex-col"
+                className="group relative bg-[#191919] border border-gray-800 rounded-xl p-8 hover:border-red-600/50 transition-all duration-300 overflow-hidden flex flex-col"
               >
                 {/* Gradient Background on Hover */}
                 <div className="absolute inset-0 bg-linear-to-br from-red-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

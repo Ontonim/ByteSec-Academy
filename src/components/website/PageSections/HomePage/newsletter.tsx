@@ -1,6 +1,4 @@
 "use client";
-
-import { Button } from "@/components/ui/button";
 import type React from "react";
 
 import { useState } from "react";
@@ -21,37 +19,40 @@ export default function NewsletterSubscribe() {
   };
 
   return (
-    <section className="py-10 inset-0 bg-[#141414] relative">
-      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
-      <div className="relative w-full max-w-7xl mx-auto px-4 text-center rounded-lg shadow-lg p-30 z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
+    <section className="relative py-10">
+      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
+      <div
+        className="relative w-full max-w-7xl mx-auto text-center rounded-2xl shadow-xl p-8 md:p-14 z-10 
+                  bg-[#2E1C1C] bg-[linear-gradient(90deg,rgba(46,28,28,1)_0%,rgba(25,25,25,1)_37%)]
+                  flex flex-col items-center"
+      >
+        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
           Subscribe Our Newsletter
         </h2>
 
-        <p className="text-gray-400 text-lg mb-8 leading-relaxed text-pretty">
+        <p className="text-gray-300 text-base md:text-lg mb-8 max-w-2xl leading-relaxed">
           Get the latest cybersecurity insights, threat intelligence, and
-          industry best practices delivered directly to your inbox. Stay ahead
-          of emerging threats.
+          industry best practices delivered directly to your inbox.
         </p>
 
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-        >
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
-            required
-            className="flex-1 px-4 py-3 rounded-lg bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600"
-          />
-          <Button
-            type="submit"
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-10 py-6 text-lg rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-red-600/50 cursor-pointer"
-          >
-            Subscribe
-          </Button>
+        <form onSubmit={handleSubmit} className="w-full max-w-lg">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 rounded-full bg-white overflow-hidden shadow-lg">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email address"
+              className="flex-1 px-6 py-3 text-gray-700 placeholder-gray-500 focus:outline-none text-sm md:text-base"
+              required
+            />
+
+            <button
+              type="submit"
+              className="px-6 py-3 sm:px-8 bg-red-600 hover:bg-red-700 text-white font-semibold transition-all text-sm md:text-base"
+            >
+              Subscribe
+            </button>
+          </div>
         </form>
 
         {isSubmitted && (

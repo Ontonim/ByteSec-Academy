@@ -152,8 +152,8 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
       onMouseLeave={() => setIsHovered(false)}
       className={`rounded-xl p-8 h-full flex flex-col transition-all duration-300 ${
         isHovered
-          ? "bg-linear-to-br from-red-900/40 via-slate-800 to-slate-900 border-2 border-red-500 shadow-lg shadow-red-500/20"
-          : "bg-slate-900 border border-slate-700"
+          ? "shadow-lg shadow-red-500/20"
+          : "bg-[#191919] border-slate-700"
       }`}
     >
       {/* Top Section with Image and Info */}

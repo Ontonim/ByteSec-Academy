@@ -92,8 +92,8 @@ const teamMembers = [
 
 export default function TeamPage() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 relative">
-      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+    <div className="min-h-screen relative">
+      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
       {/* Hero Section */}
       <div className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-4xl mx-auto text-center">

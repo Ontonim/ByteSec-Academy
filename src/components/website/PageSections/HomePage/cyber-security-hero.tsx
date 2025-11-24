@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 
 export function CyberSecurityHero() {
   return (
-    <section className="relative bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 min-h-screen flex items-center overflow-hidden">
+    <section className="relative py-10">
       {/* Background decorative elements */}
-     <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
 
       {/* Content container */}
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left side - Image */}
-          <div className="relative flex justify-center lg:justify-end order-2 lg:order-1">
+          <div className="relative flex justify-center lg:justify-end order-2 lg:order-2">
             <div className="relative w-full max-w-md">
               {/* Skewed image container with perspective */}
               <div className="relative transform lg:-skew-y-2">
@@ -30,7 +30,7 @@ export function CyberSecurityHero() {
           </div>
 
           {/* Right side - Content */}
-          <div className="space-y-6 order-1 lg:order-2">
+          <div className="space-y-6 order-1 lg:order-1">
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 <span className="text-white">Advanced</span>{" "}
