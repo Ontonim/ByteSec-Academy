@@ -6,6 +6,7 @@ import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import NewsletterSubscribe from "@/components/website/PageSections/HomePage/newsletter";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -34,8 +35,8 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-linear-to-b from-slate-900 to-slate-800 relative">
-      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+    <main className="min-h-screen relative">
+      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
       {/* Header Section */}
       <section className="py-20 text-center relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -183,6 +184,10 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <div className="py-10">
+        <NewsletterSubscribe /> 
+      </div>
     </main>
   );
 }

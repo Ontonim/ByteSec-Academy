@@ -13,12 +13,12 @@ import Link from "next/link";
 
 export default function Banner() {
   return (
-    <section className="relative bg-[#141414] text-white overflow-hidden h-screen flex items-center">
+    <section className="relative text-white overflow-hidden h-screen flex items-center">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(46,28,28,1)_0%,rgba(32,32,32,1)_40%)] opacity-100"></div>
 
       {/* Content container */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 lg:flex lg:items-center lg:justify-between lg:gap-12">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 lg:flex lg:items-center lg:justify-between lg:gap-12">
         <div className="flex flex-col justify-center space-y-8">
           <div>
             <p className="text-slate-400 text-sm font-medium mb-2 tracking-wide">

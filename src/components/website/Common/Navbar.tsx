@@ -27,6 +27,7 @@ export default function Navbar() {
   const menuItems = [
     { href: "/", label: "Home" },
     { href: "/course", label: "Course" },
+    { href: "/about", label: "About" },
     { href: "/team", label: "Team" },
     { href: "/reviews", label: "Reviews" },
     { href: "/contact-us", label: "Contact Us" },

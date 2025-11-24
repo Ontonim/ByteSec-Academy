@@ -68,7 +68,7 @@ export default function FAQAccordion() {
             className={`w-full text-left p-6 transition-all duration-300 flex items-center justify-between cursor-pointer ${
               openIndex === index
                 ? "bg-red-600 text-white"
-                : "bg-slate-800 text-gray-300 hover:bg-slate-700"
+                : "bg-[#191919] text-gray-300 hover:bg-slate-700"
             }`}
           >
             <span className="font-semibold text-lg">{item.question}</span>

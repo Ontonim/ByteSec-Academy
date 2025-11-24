@@ -7,16 +7,20 @@ import SecurityFeatures from "./security-features";
 // import StatsSection from "./stats-section";
 import Community from "./community";
 import Faq from "./Faq";
+import TrustedCompaniesSection from "./TrustCompany";
+import NewsBlogSection from "./BlogSection";
 export default function HomePage() {
   return (
     <div>
       <Banner />
+      <TrustedCompaniesSection />
       <Services />
       <WhyChooseUsEnhanced />
-      <Community />
       <CyberSecurityHero />
       {/* <StatsSection /> */}
       <SecurityFeatures />
+      <Community />
+      <NewsBlogSection />
       <Faq />
       <NewsletterSubscribe />
     </div>

@@ -195,9 +195,9 @@ export default function CourseDetailPage() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 text-white relative">
+    <div className="min-h-screen text-white relative">
       {/* Navigation */}
-      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
       <div className="border-b border-gray-800 px-4 py-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 text-sm">
@@ -322,7 +322,7 @@ export default function CourseDetailPage() {
               {courseData.tabs.syllabus.map((module, idx) => (
                 <div
                   key={idx}
-                  className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 hover:border-red-600/30 transition-all"
+                  className="bg-[#191919] border border-gray-800 rounded-lg p-6 hover:border-red-600/30 transition-all"
                 >
                   <h3 className="text-xl font-bold text-red-500 mb-4">
                     {module.section}
@@ -346,7 +346,7 @@ export default function CourseDetailPage() {
               {courseData.tabs.highlights.map((highlight, idx) => (
                 <div
                   key={idx}
-                  className="bg-linear-to-br from-red-600/10 to-transparent border border-red-600/30 rounded-lg p-6 hover:border-red-600/60 transition-all"
+                  className="bg-[#191919] border border-gray-800 rounded-lg p-6 hover:border-red-600/60 transition-all"
                 >
                   <h3 className="text-lg font-bold text-white mb-3">
                     {highlight.title}
@@ -359,7 +359,7 @@ export default function CourseDetailPage() {
 
           {/* Prerequisites Tab */}
           {activeTab === "prerequisites" && (
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-8">
+            <div className="bg-[#191919] border border-gray-800 rounded-lg p-8">
               <ul className="space-y-4">
                 {courseData.tabs.prerequisites.map((prereq, idx) => (
                   <li key={idx} className="flex items-start gap-4">
@@ -413,7 +413,7 @@ export default function CourseDetailPage() {
           {courseData.faq.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-gray-900/50 border border-gray-800 rounded-lg overflow-hidden hover:border-red-600/30 transition-all"
+              className="bg-[#191919] border border-gray-800 rounded-lg overflow-hidden hover:border-red-600/30 transition-all"
             >
               <button
                 onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}

@@ -133,14 +133,14 @@ const courses = [
 
 export default function CoursesPage() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 text-white relative">
-      <div className="absolute inset-0 bg-linear-to-r from-[#3f1111] via-[#250505] to-[#141414] opacity-100"></div>
+    <div className="min-h-screen relative">
+     <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
       {/* Header Section */}
       <div className="pt-20 pb-16 px-4 text-center relative z-10">
         <h1 className="text-5xl font-bold mb-6 text-white">
           Cybersecurity Courses
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-lg mb-8">
+        <p className="text-gray-100 max-w-2xl mx-auto text-lg mb-8">
           Master advanced cybersecurity skills with industry-leading courses.
           From ethical hacking to red team operations, advance your career.
         </p>
@@ -163,8 +163,8 @@ export default function CoursesPage() {
                 key={course.id}
                 className={`rounded-lg p-8 transition-all duration-300 flex flex-col ${
                   course.featured
-                    ? "bg-linear-to-b from-gray-900 to-black border-2 border-red-600 shadow-2xl"
-                    : "bg-gray-900 border border-gray-800 hover:border-gray-700"
+                    ? "bg-[#191919] border-2 border-red-600 shadow-2xl"
+                    : "bg- border border-gray-800 hover:border-gray-700"
                 }`}
               >
                 {course.status === "live" && (
@@ -184,8 +184,8 @@ export default function CoursesPage() {
                 </div>
 
                 {/* Course Title and Level */}
-                <h3 className="text-xl font-bold mb-2">{course.title}</h3>
-                <p className="text-gray-500 text-sm mb-4">{course.level}</p>
+                <h3 className="text-xl text-white font-bold mb-2">{course.title}</h3>
+                <p className="text-gray-100 text-sm mb-4">{course.level}</p>
 
                 {/* Description */}
                 <p className="text-gray-400 text-sm mb-6">
