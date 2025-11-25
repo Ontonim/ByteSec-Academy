@@ -37,6 +37,15 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen relative">
       <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
+
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(46,28,28,0.3) 0%, rgba(46,28,28,0.8) 50%, rgba(46,28,28,0.3) 100%)",
+        }}
+      ></div>
+
       {/* Header Section */}
       <section className="py-20 text-center relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -186,7 +195,7 @@ export default function ContactPage() {
       </section>
 
       <div className="py-10">
-        <NewsletterSubscribe /> 
+        <NewsletterSubscribe />
       </div>
     </main>
   );

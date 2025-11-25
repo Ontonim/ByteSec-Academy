@@ -1,10 +1,22 @@
-import { Check } from "lucide-react"
-import Image from "next/image"
+import { Check } from "lucide-react";
+import Image from "next/image";
 
 export default function SecurityFeatures() {
   return (
     <section className="relative py-10">
       <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
+
+      {/* Decorative Left Image */}
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
+        <Image
+          src="/images/about-section2-left-img.png"
+          alt="Decorative"
+          width={200} // adjust size
+          height={200} // adjust size
+          className="object-contain"
+        />
+      </div>
+
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="flex justify-center order-1 md:order-2">
           <Image
@@ -18,12 +30,15 @@ export default function SecurityFeatures() {
 
         <div className="order-2 md:order-1">
           <h3 className="text-4xl md:text-4xl font-bold text-white mb-6 text-balance">
-           Providing Best <span className="text-red-600">Cyber Security</span>  Solutions
+            Providing Best <span className="text-red-600">Cyber Security</span>{" "}
+            Solutions
           </h3>
 
           <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-            Protect your organization with our comprehensive security solutions. Our advanced threat detection system
-            monitors and prevents cyberattacks in real-time, ensuring your data remains safe and secure.
+            Protect your organization with our comprehensive security solutions.
+            Our advanced threat detection system monitors and prevents
+            cyberattacks in real-time, ensuring your data remains safe and
+            secure.
           </p>
 
           <ul className="space-y-4">
@@ -32,8 +47,13 @@ export default function SecurityFeatures() {
                 <Check className="w-5 h-5 text-red-600" />
               </div>
               <div>
-                <h4 className="font-bold text-white mb-1">Real-time Threat Detection</h4>
-                <p className="text-gray-400">24/7 monitoring and instant alerts for potential security threats</p>
+                <h4 className="font-bold text-white mb-1">
+                  Real-time Threat Detection
+                </h4>
+                <p className="text-gray-400">
+                  24/7 monitoring and instant alerts for potential security
+                  threats
+                </p>
               </div>
             </li>
             <li className="flex gap-3 items-start">
@@ -42,7 +62,9 @@ export default function SecurityFeatures() {
               </div>
               <div>
                 <h4 className="font-bold text-white mb-1">Data Encryption</h4>
-                <p className="text-gray-400">Military-grade encryption to protect sensitive information</p>
+                <p className="text-gray-400">
+                  Military-grade encryption to protect sensitive information
+                </p>
               </div>
             </li>
             <li className="flex gap-3 items-start">
@@ -50,13 +72,18 @@ export default function SecurityFeatures() {
                 <Check className="w-5 h-5 text-red-600" />
               </div>
               <div>
-                <h4 className="font-bold text-white mb-1">Compliance Management</h4>
-                <p className="text-gray-400">Meet regulatory requirements with automated compliance tracking</p>
+                <h4 className="font-bold text-white mb-1">
+                  Compliance Management
+                </h4>
+                <p className="text-gray-400">
+                  Meet regulatory requirements with automated compliance
+                  tracking
+                </p>
               </div>
             </li>
           </ul>
         </div>
       </div>
     </section>
-  )
+  );
 }
