@@ -198,6 +198,26 @@ export default function CourseDetailPage() {
     <div className="min-h-screen text-white relative">
       {/* Navigation */}
       <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
+
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(46,28,28,0.3) 0%, rgba(46,28,28,0.8) 50%, rgba(46,28,28,0.3) 100%)",
+        }}
+      ></div>
+
+      {/* Decorative Left Image */}
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+        <Image
+          src="/images/about-section2-left-img.png"
+          alt="Decorative"
+          width={200}
+          height={200}
+          className="object-contain"
+        />
+      </div>
+
       <div className="border-b border-gray-800 px-4 py-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 text-sm">

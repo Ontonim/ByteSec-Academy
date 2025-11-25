@@ -5,8 +5,7 @@ import Footer from "@/components/website/Common/Footer";
 
 export const metadata: Metadata = {
   title: "ByteSec Academy",
-  description:
-    "Cyber Security Training for Future Professionals",
+  description: "Cyber Security Training for Future Professionals",
 };
 
 export default function RootLayout({

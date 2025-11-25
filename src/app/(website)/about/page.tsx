@@ -1,10 +1,9 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { WhyChooseUsEnhanced } from "@/components/website/PageSections/HomePage/why-choose-us/why-choose-us-enhanced";
 import { CyberSecurityHero } from "@/components/website/PageSections/HomePage/cyber-security-hero";
 import TeamPage from "../team/page";
-import NewsletterSubscribe from "@/components/website/PageSections/HomePage/newsletter";
+// import NewsletterSubscribe from "@/components/website/PageSections/HomePage/newsletter";
 import TestimonialCarousel from "@/components/website/PageSections/Review/ReviewCaruosel";
 
 export default function AboutUsPage() {
@@ -21,7 +20,9 @@ export default function AboutUsPage() {
 
   return (
     <div className="min-h-screen relative">
-      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
+      {/* <div className="absolute inset-0 bg-[#202020] opacity-100"></div> */}
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(46,28,28,1)_0%,rgba(32,32,32,1)_40%)] opacity-100"></div>
+
       {/* Hero Section */}
       <div className="text-center text-white py-20 px-4 relative">
         <h1 className="text-5xl md:text-6xl font-bold mb-6">About Us</h1>
@@ -122,7 +123,7 @@ export default function AboutUsPage() {
         <TestimonialCarousel />
       </div>
       <TeamPage />
-      <NewsletterSubscribe />
+      {/* <NewsletterSubscribe /> */}
     </div>
   );
 }

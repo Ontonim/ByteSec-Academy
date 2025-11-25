@@ -111,30 +111,39 @@ const courses = [
     ],
     featured: false,
   },
-  {
-    id: 7,
-    title: "Certified Red Team Specialist",
-    icon: Code2,
-    level: "Advanced",
-    price: "Coming Soon",
-    status: "coming-soon",
-    description: "Comprehensive red team operations and strategy",
-    features: [
-      "Full Red Team Operations",
-      "Engagement Planning",
-      "Team Coordination",
-      "Advanced Support",
-      "Command & Control Systems",
-      "Strategic Assessment",
-    ],
-    featured: false,
-  },
+  // {
+  //   id: 7,
+  //   title: "Certified Red Team Specialist",
+  //   icon: Code2,
+  //   level: "Advanced",
+  //   price: "Coming Soon",
+  //   status: "coming-soon",
+  //   description: "Comprehensive red team operations and strategy",
+  //   features: [
+  //     "Full Red Team Operations",
+  //     "Engagement Planning",
+  //     "Team Coordination",
+  //     "Advanced Support",
+  //     "Command & Control Systems",
+  //     "Strategic Assessment",
+  //   ],
+  //   featured: false,
+  // },
 ];
 
 export default function CoursesPage() {
   return (
     <div className="min-h-screen relative">
-     <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
+      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
+
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(46,28,28,0.3) 0%, rgba(46,28,28,0.8) 50%, rgba(46,28,28,0.3) 100%)",
+        }}
+      ></div>
+
       {/* Header Section */}
       <div className="pt-20 pb-16 px-4 text-center relative z-10">
         <h1 className="text-5xl font-bold mb-6 text-white">
@@ -164,7 +173,7 @@ export default function CoursesPage() {
                 className={`rounded-lg p-8 transition-all duration-300 flex flex-col ${
                   course.featured
                     ? "bg-[#191919] border-2 border-red-600 shadow-2xl"
-                    : "bg- border border-gray-800 hover:border-gray-700"
+                    : "bg- border border-red-400 hover:border-red-600"
                 }`}
               >
                 {course.status === "live" && (
@@ -184,7 +193,9 @@ export default function CoursesPage() {
                 </div>
 
                 {/* Course Title and Level */}
-                <h3 className="text-xl text-white font-bold mb-2">{course.title}</h3>
+                <h3 className="text-xl text-white font-bold mb-2">
+                  {course.title}
+                </h3>
                 <p className="text-gray-100 text-sm mb-4">{course.level}</p>
 
                 {/* Description */}
@@ -222,7 +233,7 @@ export default function CoursesPage() {
                     </Link>
                   ) : (
                     <Button
-                      className="w-full font-semibold bg-gray-800 text-gray-400 cursor-not-allowed transition-all"
+                      className="w-full font-semibold bg-gray-800 text-gray-400 cursor-not-allowed transition-all border-red-600"
                       disabled
                     >
                       Coming Soon
