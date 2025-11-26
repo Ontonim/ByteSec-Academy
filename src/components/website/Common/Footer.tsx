@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="relative w-full text-white py-16 bg-[#1E1E1E] overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1e1e1e] via-[#2a1d1a] to-black opacity-70"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-[#1e1e1e] via-[#2a1d1a] to-black opacity-70"></div>
 
       {/* Decorative Left Image */}
       <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
