@@ -228,7 +228,7 @@ export default function CoursesPage() {
                   {course.status === "live" ? (
                     <Link href={`/course/${course.id}`}>
                       <Button className="w-full font-semibold bg-red-600 hover:bg-red-700 text-white cursor-pointer transition-all">
-                        Enroll Now
+                        View Details
                       </Button>
                     </Link>
                   ) : (
