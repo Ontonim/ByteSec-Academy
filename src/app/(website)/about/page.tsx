@@ -111,7 +111,7 @@ export default function AboutUsPage() {
       <WhyChooseUsEnhanced />
       <CyberSecurityHero />
       <div className="relative py-10">
-        <div className="text-white text-center mb-16">
+        {/* <div className="text-white text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             What Clients Say
           </h2>
@@ -119,7 +119,7 @@ export default function AboutUsPage() {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Recusandae, quod!
           </p>
-        </div>
+        </div> */}
         <TestimonialCarousel />
       </div>
       <TeamPage />

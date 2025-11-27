@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export default function Banner() {
   return (
-    <section className="relative text-white overflow-hidden h-screen flex items-center">
+    <section className="relative text-white overflow-hidden h-[85vh] flex items-center">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(46,28,28,1)_0%,rgba(32,32,32,1)_40%)] opacity-100"></div>
 

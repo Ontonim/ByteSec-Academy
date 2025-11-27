@@ -1,4 +1,7 @@
+import NewsletterSubscribe from "@/components/website/PageSections/HomePage/newsletter";
+import TestimonialCarousel from "@/components/website/PageSections/Review/ReviewCaruosel";
 import { ServiceCard } from "@/components/website/PageSections/services/service-card";
+import Image from "next/image";
 
 const services = [
   {
@@ -49,7 +52,7 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen relative">
       <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
-      <div className="px-6 py-16 text-center relative">
+      <div className="px-6 py-8 text-center relative">
         <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>
         <p className="text-neutral-400 max-w-2xl mx-auto text-base leading-relaxed mb-8">
           Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusm
@@ -66,11 +69,28 @@ export default function ServicesPage() {
       </div>
 
       <div className="px-4 py-20">
+        {/* Decorative Left Image */}
+        <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+          <Image
+            src="/images/about-us-section-right-icon.png"
+            alt="Decorative"
+            width={200} // adjust size
+            height={200} // adjust size
+            className="object-contain"
+          />
+        </div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
+      </div>
+      <div className="">
+        <TestimonialCarousel />
+      </div>
+
+      <div className="">
+        <NewsletterSubscribe />
       </div>
     </main>
   );

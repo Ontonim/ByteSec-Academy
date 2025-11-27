@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Testimonial {
   id: number;
@@ -72,11 +73,10 @@ export default function TestimonialCarousel() {
 
   useEffect(() => {
     if (!autoPlay) return;
-
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 7000);
-
+    const timer = setInterval(
+      () => setCurrentIndex((prev) => (prev + 1) % testimonials.length),
+      7000
+    );
     return () => clearInterval(timer);
   }, [autoPlay]);
 
@@ -89,9 +89,29 @@ export default function TestimonialCarousel() {
   const handleMouseLeave = () => setAutoPlay(true);
 
   return (
-    <div>
+    <div className="relative">
+      {/* Solid Background */}
+      <div className="absolute inset-0 bg-[#202020] z-0"></div>
+
+      {/* Fixed Header Section */}
+      <div className="text-center py-16 px-4 relative z-10">
+        <h1 className="text-5xl font-bold text-white mb-6">Testimonials</h1>
+        <p className="text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed">
+          Hear from our satisfied clients about their experience working with us
+          and the impact we&apos;ve made on their business growth.
+        </p>
+        {/* <div className="flex justify-center gap-2 mt-8 text-slate-300">
+          <Link href="/" className="hover:text-white transition">
+            Home
+          </Link>
+          <span>/</span>
+          <span className="text-red-500">Testimonials</span>
+        </div> */}
+      </div>
+
+      {/* Carousel */}
       <div
-        className="max-w-7xl mx-auto overflow-hidden"
+        className="max-w-7xl mx-auto overflow-hidden relative z-10"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -121,7 +141,8 @@ export default function TestimonialCarousel() {
         </div>
       </div>
 
-      <div className="flex justify-center gap-3 mt-12">
+      {/* Dots */}
+      <div className="flex justify-center gap-3 mt-12 relative z-10">
         {testimonials.map((_, index) => (
           <button
             key={index}
@@ -150,7 +171,7 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`rounded-xl p-8 h-full flex flex-col transition-all duration-300 ${
+      className={`rounded-xl p-8 h-full flex flex-col transition-all duration-300 mt-10 ${
         isHovered
           ? "shadow-lg shadow-red-500/20"
           : "bg-[#191919] border-slate-700"
@@ -163,20 +184,26 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
           alt={testimonial.name}
           width={400}
           height={400}
-          className={`w-20 h-20 rounded-lg shrink-0 object-cover transition-all duration-300 ${!isHovered ? "grayscale" : ""}`}
+          className={`w-20 h-20 rounded-lg shrink-0 object-cover transition-all duration-300 ${
+            !isHovered ? "grayscale" : ""
+          }`}
         />
         <div className="flex-1">
           <h3 className="text-xl font-semibold mb-1 text-white">
             {testimonial.name}
           </h3>
           <p
-            className={`text-sm font-medium transition-colors duration-300 ${isHovered ? "text-red-500" : "text-slate-400"}`}
+            className={`text-sm font-medium transition-colors duration-300 ${
+              isHovered ? "text-red-500" : "text-slate-400"
+            }`}
           >
             {testimonial.title}
           </p>
         </div>
         <div
-          className={`text-4xl transition-colors duration-300 ${isHovered ? "text-slate-600" : "text-slate-800"}`}
+          className={`text-4xl transition-colors duration-300 ${
+            isHovered ? "text-slate-600" : "text-slate-800"
+          }`}
         >
           &quot;
         </div>
@@ -184,14 +211,18 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
 
       {/* Quote */}
       <p
-        className={`leading-relaxed flex-1 mb-6 transition-colors duration-300 ${isHovered ? "text-slate-300" : "text-slate-400"}`}
+        className={`leading-relaxed flex-1 mb-6 transition-colors duration-300 ${
+          isHovered ? "text-slate-300" : "text-slate-400"
+        }`}
       >
         {testimonial.quote}
       </p>
 
       {/* Bottom Section - Border and Stars */}
       <div
-        className={`pt-4 transition-colors duration-300 ${isHovered ? "border-t border-slate-700" : "border-t border-slate-800"}`}
+        className={`pt-4 transition-colors duration-300 ${
+          isHovered ? "border-t border-slate-700" : "border-t border-slate-800"
+        }`}
       >
         <div className="flex gap-1">
           {Array(testimonial.rating)
@@ -200,7 +231,11 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
               <Star
                 key={i}
                 size={18}
-                className={`transition-colors duration-300 ${isHovered ? "fill-red-500 text-red-500" : "fill-slate-600 text-slate-600"}`}
+                className={`transition-colors duration-300 ${
+                  isHovered
+                    ? "fill-red-500 text-red-500"
+                    : "fill-slate-600 text-slate-600"
+                }`}
               />
             ))}
         </div>
