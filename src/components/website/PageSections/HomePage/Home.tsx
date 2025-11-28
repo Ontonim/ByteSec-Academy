@@ -1,27 +1,25 @@
 import Banner from "@/components/website/PageSections/HomePage/Banner";
-import Services from "@/components/website/PageSections/HomePage/Services";
 import { CyberSecurityHero } from "./cyber-security-hero";
-import { WhyChooseUsEnhanced } from "./why-choose-us/why-choose-us-enhanced";
 import NewsletterSubscribe from "./newsletter";
-import SecurityFeatures from "./security-features";
-// import StatsSection from "./stats-section";
-import Community from "./community";
-import Faq from "./Faq";
-import TrustedCompaniesSection from "./TrustCompany";
 import NewsBlogSection from "./BlogSection";
+import TestimonialCarousel from "../Review/ReviewCaruosel";
+// import ServicesPage from "@/app/(website)/services/page";
+import TrustedCompaniesSection from "./TrustCompany";
+import CoursesGrid from "../Course/CourseGrid";
+
 export default function HomePage() {
   return (
-    <div>
+    <div className="">
       <Banner />
       <TrustedCompaniesSection />
-      <Services />
-      <WhyChooseUsEnhanced />
+      <div className="relative pt-26">
+        <div className="absolute inset-0 bg-[#202020] z-0"></div>
+        <CoursesGrid />
+      </div>
+      <TestimonialCarousel />
       <CyberSecurityHero />
-      {/* <StatsSection /> */}
-      <SecurityFeatures />
-      <Community />
+      {/* <ServicesPage /> */}
       <NewsBlogSection />
-      <Faq />
       <NewsletterSubscribe />
     </div>
   );

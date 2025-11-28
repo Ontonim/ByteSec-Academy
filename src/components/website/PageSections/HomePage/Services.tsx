@@ -63,12 +63,10 @@
 //   );
 // }
 
+"use client";
 
-
-"use client"
-
-import { ArrowRight, Zap, Users, TrendingUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ArrowRight, Zap, Users, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -101,7 +99,7 @@ const services = [
     ctaText: "Start Your Career Path",
     icon: TrendingUp,
   },
-]
+];
 
 export default function ServicesPage() {
   return (
@@ -112,7 +110,7 @@ export default function ServicesPage() {
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, idx) => {
-            const IconComponent = service.icon
+            const IconComponent = service.icon;
             return (
               <div
                 key={idx}
@@ -137,8 +135,12 @@ export default function ServicesPage() {
                   <ul className="space-y-4 mb-8 grow">
                     {service.keyPoints.map((point, pointIdx) => (
                       <li key={pointIdx} className="flex items-start gap-3">
-                        <span className="text-red-500 mt-1 font-bold text-lg shrink-0">•</span>
-                        <span className="text-gray-300 text-sm leading-relaxed">{point}</span>
+                        <span className="text-red-500 mt-1 font-bold text-lg shrink-0">
+                          •
+                        </span>
+                        <span className="text-gray-300 text-sm leading-relaxed">
+                          {point}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -150,10 +152,10 @@ export default function ServicesPage() {
                   </Button>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </div>
-  )
+  );
 }

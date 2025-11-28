@@ -1,12 +1,14 @@
 "use client";
 
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
 import { useState } from "react";
 
 interface Service {
   id: number;
   title: string;
   description: string;
-  icon: string;
+  image: string | StaticImport;
 }
 
 interface ServiceCardProps {
@@ -20,14 +22,22 @@ export function ServiceCard({ service }: ServiceCardProps) {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`relative p-8 rounded-lg transition-all duration-300 ${
+      className={`relative p-8 rounded transition-all duration-300 ${
         isHovered
-          ? "bg-neutral-800 border-l-4 border-red-500"
-          : "bg-neutral-800/50 border-l-4 border-neutral-700"
+          ? "bg-neutral-800 border-b-4 border-red-500"
+          : "bg-neutral-800/50 border-neutral-700"
       }`}
     >
       {" "}
-      <div className="text-5xl mb-6">{service.icon}</div>
+      <div className={`w-20 mb-6 rounded-lg p-4 group bg-[#202020]`}>
+        <Image
+          alt={service.title}
+          src={service.image}
+          width={200}
+          height={200}
+          className="transition duration-300 group-hover:grayscale group-hover:brightness-200"
+        />
+      </div>
       <h3
         className={`text-xl font-bold mb-4 transition-colors duration-300 ${isHovered ? "text-white" : "text-white"}`}
       >

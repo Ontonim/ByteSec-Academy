@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative w-full text-white py-16 bg-[#1E1E1E] overflow-hidden">
+    <footer className="relative w-full text-white py-16 bg-[#1E1E1E] overflow-hidden ">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-linear-to-br from-[#1e1e1e] via-[#2a1d1a] to-black opacity-70"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-[#1e1e1e] via-[#2a1d1a] to-black opacity-70 "></div>
 
       {/* Decorative Left Image */}
       <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
@@ -19,10 +19,10 @@ const Footer = () => {
         />
       </div>
 
-      <div className="relative container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="relative container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-1 max-w-7xl">
         {/* Column 1 - Logo + About */}
         <div>
-          <Link href="/" className="inline-block mb-4">
+          <Link href="/" className="inline-block mb-1">
             <Image
               src="/images/logo.png"
               alt="Logo"
@@ -59,42 +59,64 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-
         {/* Column 2 – Services */}
         <div>
           <h3 className="text-2xl font-semibold mb-5">Services</h3>
           <ul className="space-y-3 text-gray-300">
             <li className="hover:text-red-500 cursor-pointer">
-              Security Training
+              Web App Pentesting
+            </li>
+            <li className="hover:text-red-500 cursor-pointer">AD Pentesting</li>
+            <li className="hover:text-red-500 cursor-pointer">
+              API Pentesting
             </li>
             <li className="hover:text-red-500 cursor-pointer">
-              Cloud Security
+              Network Pentesting
             </li>
             <li className="hover:text-red-500 cursor-pointer">
-              Secure Managed IT
+              Server Pentesting
             </li>
-            <li className="hover:text-red-500 cursor-pointer">Data Privacy</li>
-            {/* <li className="hover:text-red-500 cursor-pointer">
-              Industry Certified
-            </li> */}
-            {/* <li className="hover:text-red-500 cursor-pointer">
-              Threat Intelligence
-            </li> */}
+            <li className="hover:text-red-500 cursor-pointer">
+              Mobile App Pentesting
+            </li>
           </ul>
         </div>
-
         {/* Column 3 – Support */}
         <div>
-          <h3 className="text-2xl font-semibold mb-5">Support</h3>
+          <h3 className="text-2xl font-semibold mb-5">Company</h3>
           <ul className="space-y-3 text-gray-300">
-            <li className="hover:text-red-500 cursor-pointer">Support</li>
-            <li className="hover:text-red-500 cursor-pointer">Contact Us</li>
-            <li className="hover:text-red-500 cursor-pointer">About Us</li>
-            <li className="hover:text-red-500 cursor-pointer">FAQ</li>
-            {/* <li className="hover:text-red-500 cursor-pointer">Partnerships</li> */}
+            <li>
+              <Link href="/contact-us" className="hover:text-red-500">
+                Support
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact-us" className="hover:text-red-500">
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/reviews" className="hover:text-red-500">
+                Reviews
+              </Link>
+            </li>
+            <li>
+              <Link href="/team" className="hover:text-red-500">
+                Our Team
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy-policy" className="hover:text-red-500">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms-conditions" className="hover:text-red-500">
+                Terms & Conditions
+              </Link>
+            </li>
           </ul>
         </div>
-
         {/* Column 4 – Contact Info */}
         <div>
           <h3 className="text-2xl font-semibold mb-5">Get in Touch</h3>
