@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Testimonial {
   id: number;
@@ -89,50 +88,46 @@ export default function TestimonialCarousel() {
   const handleMouseLeave = () => setAutoPlay(true);
 
   return (
-    <div className="relative">
-      {/* Solid Background */}
+    <div className="relative w-full">
+      {/* Background */}
       <div className="absolute inset-0 bg-[#202020] z-0"></div>
 
-      {/* Fixed Header Section */}
-      <div className="text-center py-16 px-4 relative z-10">
-        <h1 className="text-5xl font-bold text-white mb-6">Testimonials</h1>
-        <p className="text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed">
+      {/* Header */}
+      <div className="text-center relative z-10 pt-28 sm:pt-32 md:pt-36 px-4 sm:px-6 lg:px-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          Testimonials
+        </h1>
+        <p className="text-slate-300 max-w-xl sm:max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
           Hear from our satisfied clients about their experience working with us
           and the impact we&apos;ve made on their business growth.
         </p>
-        {/* <div className="flex justify-center gap-2 mt-8 text-slate-300">
-          <Link href="/" className="hover:text-white transition">
-            Home
-          </Link>
-          <span>/</span>
-          <span className="text-red-500">Testimonials</span>
-        </div> */}
       </div>
 
-      {/* Carousel */}
+      {/* Carousel Wrapper */}
       <div
-        className="max-w-7xl mx-auto overflow-hidden relative z-10"
+        className="max-w-7xl mx-auto overflow-hidden relative z-10 px-4 sm:px-6 lg:px-8 mt-10 sm:mt-12 py-16"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="relative">
+        <div className="relative w-full">
           <div
-            className="flex transition-transform duration-700 ease-in-out gap-6"
+            className="flex transition-transform duration-700 ease-in-out gap-4 sm:gap-6"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="min-w-full flex gap-6">
+            {testimonials.map((testimonial, idx) => (
+              <div
+                key={testimonial.id}
+                className="min-w-full flex gap-4 sm:gap-6"
+              >
+                {/* First Card */}
                 <div className="flex-1">
                   <TestimonialCard testimonial={testimonial} />
                 </div>
+
+                {/* Second Card for lg+ */}
                 <div className="hidden lg:flex flex-1">
                   <TestimonialCard
-                    testimonial={
-                      testimonials[
-                        (testimonials.indexOf(testimonial) + 1) %
-                          testimonials.length
-                      ]
-                    }
+                    testimonial={testimonials[(idx + 1) % testimonials.length]}
                   />
                 </div>
               </div>
@@ -142,17 +137,16 @@ export default function TestimonialCarousel() {
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center gap-3 mt-12 relative z-10">
+      <div className="flex justify-center gap-2 sm:gap-3 mt-8 sm:mt-10 pb-12 relative z-10">
         {testimonials.map((_, index) => (
           <button
             key={index}
             onClick={() => handleDotClick(index)}
             className={`rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? "bg-red-500 w-8 h-3"
-                : "bg-slate-600 w-3 h-3 hover:bg-slate-500"
+                ? "bg-red-500 w-6 sm:w-8 h-2 sm:h-3"
+                : "bg-slate-600 w-2.5 h-2.5 sm:w-3 sm:h-3 hover:bg-slate-500"
             }`}
-            aria-label={`Go to testimonial ${index + 1}`}
           />
         ))}
       </div>
@@ -171,37 +165,39 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`rounded-xl p-8 h-full flex flex-col transition-all duration-300 mt-10 ${
+      className={`rounded-xl p-6 sm:p-8 h-full flex flex-col transition-all duration-300 mt-6 sm:mt-10 ${
         isHovered
-          ? "shadow-lg shadow-red-500/20"
-          : "bg-[#191919] border-slate-700"
+          ? "shadow-lg shadow-red-500/20 bg-[#1a1a1a]"
+          : "bg-[#191919] border border-slate-700"
       }`}
     >
-      {/* Top Section with Image and Info */}
-      <div className="flex items-start gap-6 mb-6">
+      {/* Top Section: Image + Info */}
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
         <Image
           src={testimonial.image}
           alt={testimonial.name}
           width={400}
           height={400}
-          className={`w-20 h-20 rounded-lg shrink-0 object-cover transition-all duration-300 ${
+          className={`w-16 h-16 sm:w-20 sm:h-20 rounded-lg shrink-0 object-cover transition-all duration-300 ${
             !isHovered ? "grayscale" : ""
           }`}
         />
-        <div className="flex-1">
-          <h3 className="text-xl font-semibold mb-1 text-white">
+
+        <div className="flex-1 text-center sm:text-left">
+          <h3 className="text-lg sm:text-xl font-semibold mb-1 text-white">
             {testimonial.name}
           </h3>
           <p
-            className={`text-sm font-medium transition-colors duration-300 ${
+            className={`text-sm sm:text-base font-medium transition-colors duration-300 ${
               isHovered ? "text-red-500" : "text-slate-400"
             }`}
           >
             {testimonial.title}
           </p>
         </div>
+
         <div
-          className={`text-4xl transition-colors duration-300 ${
+          className={`text-3xl sm:text-4xl mt-2 sm:mt-0 transition-colors duration-300 ${
             isHovered ? "text-slate-600" : "text-slate-800"
           }`}
         >
@@ -211,26 +207,26 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
 
       {/* Quote */}
       <p
-        className={`leading-relaxed flex-1 mb-6 transition-colors duration-300 ${
+        className={`leading-relaxed flex-1 mb-4 sm:mb-6 text-sm sm:text-base transition-colors duration-300 ${
           isHovered ? "text-slate-300" : "text-slate-400"
         }`}
       >
         {testimonial.quote}
       </p>
 
-      {/* Bottom Section - Border and Stars */}
+      {/* Bottom Section: Stars */}
       <div
-        className={`pt-4 transition-colors duration-300 ${
-          isHovered ? "border-t border-slate-700" : "border-t border-slate-800"
+        className={`pt-3 sm:pt-4 border-t transition-colors duration-300 ${
+          isHovered ? "border-slate-700" : "border-slate-800"
         }`}
       >
-        <div className="flex gap-1">
+        <div className="flex justify-center sm:justify-start gap-1 sm:gap-1.5">
           {Array(testimonial.rating)
             .fill(0)
             .map((_, i) => (
               <Star
                 key={i}
-                size={18}
+                size={16} // Mobile friendly
                 className={`transition-colors duration-300 ${
                   isHovered
                     ? "fill-red-500 text-red-500"

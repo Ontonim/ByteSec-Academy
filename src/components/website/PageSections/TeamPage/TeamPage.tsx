@@ -93,8 +93,10 @@ const teamMembers = [
 export default function TeamPage() {
   return (
     <div className="min-h-screen relative">
-      <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
+      {/* Background Base Color */}
+      <div className="absolute inset-0 bg-[#202020]"></div>
 
+      {/* Overlay Gradient */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -103,24 +105,25 @@ export default function TeamPage() {
         }}
       ></div>
 
-      {/* Decorative Left Image */}
-      <div className="absolute right-10 top-1/2 transform -translate-y-1/2">
+      {/* Decorative Image (Hide on Mobile) */}
+      <div className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 hidden md:block">
         <Image
           src="/images/about-section2-left-img.png"
           alt="Decorative"
-          width={200} // adjust size
-          height={200} // adjust size
+          width={200}
+          height={200}
           className="object-cover"
         />
       </div>
 
       {/* Hero Section */}
-      <div className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 z-10">
+      <div className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Our Expert Team
           </h1>
-          <p className="text-lg text-slate-200 mb-8 leading-relaxed">
+
+          <p className="text-base sm:text-lg text-slate-200 mb-6 leading-relaxed">
             Meet the exceptional cybersecurity professionals dedicated to
             protecting your digital assets and ensuring organizational security
             excellence.
@@ -141,68 +144,64 @@ export default function TeamPage() {
       </div>
 
       {/* Team Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {teamMembers.map((member) => (
             <div
               key={member.id}
               className="group flex flex-col items-center text-center"
             >
-              {/* Image Container with Grayscale Hover Effect */}
-              <div className="relative w-full mb-6 overflow-hidden rounded-xl">
+              {/* Image */}
+              <div className="relative w-full mb-4 overflow-hidden rounded-xl">
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  className="w-full h-80 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                  className="w-full h-64 sm:h-72 md:h-80 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
                   width={800}
                   height={800}
                 />
-                {/* Overlay Gradient on Hover */}
+
                 <div className="absolute inset-0 bg-linear-to-t from-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
-              {/* Name - becomes bold on hover */}
-              <h3 className="text-xl font-semibold text-white mb-2 transition-all duration-300 group-hover:font-bold">
+              {/* Name */}
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-1 group-hover:font-bold">
                 {member.name}
               </h3>
 
-              {/* Designation - changes to red on hover */}
-              <p className="text-slate-100 font-medium mb-3 transition-colors duration-300 group-hover:text-red-500">
+              {/* Designation */}
+              <p className="text-slate-100 font-medium mb-3 text-sm sm:text-base group-hover:text-red-500 transition-colors duration-300">
                 {member.designation}
               </p>
 
               {/* Bio */}
-              <p className="text-slate-200 text-sm leading-relaxed mb-6 line-clamp-3">
+              <p className="text-slate-200 text-sm leading-relaxed mb-4 sm:mb-6 line-clamp-3">
                 {member.bio}
               </p>
 
-              {/* Social Links */}
-              <div className="flex justify-center gap-4">
+              {/* Social */}
+              <div className="flex justify-center gap-3 sm:gap-4">
                 <a
                   href={`mailto:${member.social.email}`}
                   className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-                  aria-label="Email"
                 >
                   <Mail size={18} />
                 </a>
                 <a
                   href={member.social.linkedin}
                   className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-                  aria-label="LinkedIn"
                 >
                   <Linkedin size={18} />
                 </a>
                 <a
                   href={member.social.twitter}
                   className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-                  aria-label="Twitter"
                 >
                   <Twitter size={18} />
                 </a>
                 <a
                   href={member.social.github}
                   className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-                  aria-label="GitHub"
                 >
                   <Github size={18} />
                 </a>

@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const courseData = {
+  id: 1,
   title: "Certified Ethical Hacking & Bug Bounty Expert",
   tagline: "Master Bug Bounty & Penetration Testing",
   description:
