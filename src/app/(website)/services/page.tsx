@@ -77,11 +77,26 @@ const services = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen relative overflow-hidden">
-      {/* Background Layer */}
       <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
+      {/* Background Layer */}
+      {/* <div
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(46,28,28,0.3) 0%, rgba(46,28,28,0.8) 50%, rgba(46,28,28,0.3) 100%)",
+        }}
+      ></div> */}
+
+      <div
+        className="
+    absolute inset-0 
+    bg-[radial-gradient(ellipse_at_center,rgba(46,28,28,0.35)_0%,rgba(32,32,32,0)_80%)]
+    backdrop-blur-sm
+  "
+      ></div>
 
       {/* PAGE TITLE SECTION */}
-      <div className="px-4 py-20 text-center relative">
+      <div className="px-4 pt-24 text-center relative">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
           Our Services
         </h1>

@@ -124,12 +124,12 @@ export default function CoursesGrid() {
               key={course.id}
               className={`rounded-lg p-8 transition-all duration-300 flex flex-col ${
                 course.featured
-                  ? "bg-[#191919] border-2 border-red-600 shadow-2xl"
-                  : "bg- border border-red-400 hover:border-red-600"
+                  ? "bg-[#191919] border-2 border-red-400 hover:border-red-600 shadow-2xl"
+                  : "bg- border border-red-200 hover:border-red-300"
               }`}
             >
               {course.status === "live" && (
-                <div className="mb-4 inline-block px-3 py-1 bg-red-600 text-white text-xs font-semibold rounded-full">
+                <div className="mb-4 inline-block px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded-full">
                   Live Now
                 </div>
               )}
@@ -177,13 +177,13 @@ export default function CoursesGrid() {
                 </div>
                 {course.status === "live" ? (
                   <Link href={`/course/${course.id}`}>
-                    <Button className="w-full font-semibold bg-red-600 hover:bg-red-700 text-white cursor-pointer transition-all">
+                    <Button className="w-full font-semibold border border-red-500 hover:bg-red-700 text-white cursor-pointer transition-all">
                       View Details
                     </Button>
                   </Link>
                 ) : (
                   <Button
-                    className="w-full font-semibold bg-gray-800 text-gray-400 cursor-not-allowed transition-all border-red-600"
+                    className="w-full font-semibold bg-gray-800 text-gray-400 cursor-not-allowed transition-all border border-red-400"
                     disabled
                   >
                     Coming Soon

@@ -103,6 +103,16 @@ export default function TestimonialCarousel() {
         </p>
       </div>
 
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
+        <Image
+          src="/images/about-section2-left-img.png"
+          alt="Decorative"
+          width={200} // adjust size
+          height={200} // adjust size
+          className="object-contain"
+        />
+      </div>
+
       {/* Carousel Wrapper */}
       <div
         className="max-w-7xl mx-auto overflow-hidden relative z-10 px-4 sm:px-6 lg:px-8 mt-10 sm:mt-12 py-16"
