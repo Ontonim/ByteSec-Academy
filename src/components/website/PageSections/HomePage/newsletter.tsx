@@ -17,16 +17,17 @@ export default function NewsletterSubscribe() {
       }, 3000);
     }
   };
+  
 
   return (
     <section className="relative py-10">
       <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
       <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(46,28,28,0.3) 0%, rgba(46,28,28,0.8) 50%, rgba(46,28,28,0.3) 100%)",
-        }}
+        className="
+    absolute inset-0 
+    bg-[radial-gradient(ellipse_at_center,rgba(46,28,28,0.35)_0%,rgba(32,32,32,0)_80%)]
+    backdrop-blur-sm
+  "
       ></div>
       <div
         className="relative w-full max-w-7xl mx-auto text-center rounded-2xl shadow-xl p-8 md:p-14 z-10 

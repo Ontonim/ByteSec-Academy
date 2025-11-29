@@ -7,6 +7,14 @@ export function CyberSecurityHero() {
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
 
+      <div
+        className="
+    absolute inset-0 
+    bg-[radial-gradient(ellipse_at_center,rgba(46,28,28,0.35)_0%,rgba(32,32,32,0)_80%)]
+    backdrop-blur-sm
+  "
+      ></div>
+
       {/* Content container */}
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">

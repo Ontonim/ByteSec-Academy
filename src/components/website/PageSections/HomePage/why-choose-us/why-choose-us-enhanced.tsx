@@ -44,12 +44,12 @@ export function WhyChooseUsEnhanced() {
       <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
 
       {/* Decorative Left Image */}
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+      <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 opacity-70">
         <Image
-          src="/images/about-section2-left-img.png"
+          src="/images/about-us-section-right-icon.png"
           alt="Decorative"
-          width={200} // adjust size
-          height={200} // adjust size
+          width={180}
+          height={180}
           className="object-contain"
         />
       </div>

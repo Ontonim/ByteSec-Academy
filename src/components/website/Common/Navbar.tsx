@@ -80,14 +80,14 @@ export default function Navbar() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Link href="/course">
-              <Button className="relative bg-linear-to-r from-red-600 to-red-500 text-white hover:from-red-700 hover:to-red-600 font-semibold px-6 py-2.5 rounded-lg shadow-lg shadow-red-600/30 transition-all duration-300 hover:shadow-red-600/50 hover:scale-105 overflow-hidden group">
+              <Button className="relative bg-linear-to-r from-red-600 to-red-500 text-white hover:from-red-700 hover:to-red-600 font-semibold px-6 py-2.5 rounded-lg shadow-lg shadow-red-600/30 transition-all duration-300 hover:shadow-red-600/50 hover:scale-105 overflow-hidden group cursor-pointer">
                 <span className="relative z-10">Enroll Now</span>
                 <div className="absolute inset-0 bg-linear-to-r from-red-700 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
             </Link>
 
             <Link href="/contact-us">
-              <Button className="relative border-2 border-white/20 text-white hover:border-red-500 hover:text-red-400 font-semibold px-6 py-2.5 rounded-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+              <Button className="relative border-2 border-white/20 text-white hover:border-red-500 hover:text-red-400 font-semibold px-6 py-2.5 rounded-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 cursor-pointer">
                 Contact Us
               </Button>
             </Link>
@@ -144,12 +144,12 @@ export default function Navbar() {
                   {/* Mobile CTA Buttons */}
                   <div className="flex flex-col gap-3 pb-8 border-t border-white/10 p-4">
                     <Link href="/course" onClick={() => setOpen(false)}>
-                      <Button className="w-full border-2 border-white/20 text-white hover:border-red-500 hover:text-red-400 font-semibold py-6 rounded-lg bg-white/5 hover:bg-white/10">
+                      <Button className="w-full border-2 border-white/20 text-white hover:border-red-500 hover:text-red-400 font-semibold py-6 rounded-lg bg-white/5 hover:bg-white/10 cursor-pointer transition-all duration-300">
                         Enroll Now
                       </Button>
                     </Link>
                     <Link href="/contact-us" onClick={() => setOpen(false)}>
-                      <Button className="w-full border-2 border-white/20 text-white hover:border-red-500 hover:text-red-400 font-semibold py-6 rounded-lg bg-white/5 hover:bg-white/10">
+                      <Button className="w-full border-2 border-white/20 text-white hover:border-red-500 hover:text-red-400 font-semibold py-6 rounded-lg bg-white/5 hover:bg-white/10 cursor-pointer transition-all duration-300">
                         Contact Us
                       </Button>
                     </Link>

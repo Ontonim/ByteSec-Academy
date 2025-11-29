@@ -7,6 +7,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import NewsletterSubscribe from "@/components/website/PageSections/HomePage/newsletter";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -39,12 +40,22 @@ export default function ContactPage() {
       <div className="absolute inset-0 bg-[#202020] opacity-100"></div>
 
       <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(46,28,28,0.3) 0%, rgba(46,28,28,0.8) 50%, rgba(46,28,28,0.3) 100%)",
-        }}
+        className="
+    absolute inset-0 
+    bg-[radial-gradient(ellipse_at_center,rgba(46,28,28,0.35)_0%,rgba(32,32,32,0)_80%)]
+    backdrop-blur-sm
+  "
       ></div>
+
+      <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 opacity-70">
+        <Image
+          src="/images/about-us-section-right-icon.png"
+          alt="Decorative"
+          width={180}
+          height={180}
+          className="object-contain"
+        />
+      </div>
 
       {/* Header Section */}
       <section className="py-20 text-center relative z-10">
